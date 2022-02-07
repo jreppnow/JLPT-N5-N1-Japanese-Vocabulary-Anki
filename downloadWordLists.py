@@ -1,14 +1,7 @@
 import json
 import urllib.request
 import urllib.parse
-import re
-import os.path
-import time
 import argparse
-
-import pandas as pd
-import numpy as np
-from bs4 import BeautifulSoup
 
 # folder to save generated results in
 folder_name = "generated"
@@ -116,7 +109,7 @@ if __name__ == "__main__":
     args = parse_args()
 
     # Which JLPT grades to get (any combination of N5, N4, N3, N2, N1 and #common)
-    JLPT_Grades = ["N5", "N4", "N3", "N2", "N1", "#common"]
+    JLPT_Grades = ["N5", "N4", "N3", "N2", "N1"]
 
     for N in JLPT_Grades:
         getAllOfGroup(N)
